@@ -1,0 +1,35 @@
+{
+  "name": "2nd_me",
+  "version": "1.0.0",
+  "description": "First MERM app done by me",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "first_merm"
+  },
+  "engines": {
+    "node": "10.16.1",
+    "npm": "6.14.2"
+  },
+  "author": "FedericoRojo",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.18",
+    "react-scripts": "^3.4.1"
+  }
+}
